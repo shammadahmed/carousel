@@ -22,6 +22,8 @@ const changeVisibleImgTo = imageNumber => {
 		if (img.dataset.cImg === imageNumber) {
 			img.style.display = 'block';
 			visibleImg = imageNumber;
+			carouselDots.forEach(dot => { dot.style.border = ""});
+			carouselDots[imageNumber - 1].style.border = "1px solid gold"
 		} else {
 			img.style.display = 'none';
 		}
@@ -58,3 +60,14 @@ carouselArrows.forEach( arrow => {
 });
 
 document.addEventListener('DOMContentLoaded', () => changeVisibleImgTo('1'));
+
+setInterval(() => {
+	if (visibleImg == carouselImgs.length) {
+		nextImg = '1';
+	} else {
+		nextImg = String(+visibleImg + 1);
+	}
+
+	changeVisibleImgTo(nextImg);
+}, 5000);
+
