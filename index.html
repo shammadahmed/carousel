@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Carousel Plugin</title>
+</head>
+<body>
+	<style>
+		.img-big { width: 600px; }
+		.dot-big { font-size: 4em; }
+		.carousel { width: 700; cursor: default; text-align: center; }
+		.arrow { font-size: 2em; padding: .3em }
+		.slides { display: flex; justify-content: center; align-items: center; }
+	</style>
+	<div class="carousel">
+		<div class="slides">
+			<span class="arrow" data-c-arrow="b">&#8592;</span>
+			<div class="slide" data-c-img="1">
+				<img class="img-big" src="./img/a.jpg" alt="Planet Earth 1">
+			</div>
+			<div class="slide" data-c-img="2">
+				<img class="img-big" src="./img/b.jpg" alt="Planet Earth 2">
+			</div>
+			<div class="slide" data-c-img="3">
+				<img class="img-big" src="./img/c.jpg" alt="Planet Earth 3">
+			</div>
+			<span class="arrow" data-c-arrow="f">&#8594;</span>
+		</div>
+		<div class="dots">
+			<span class="dot-big" data-c-dot="1">&middot;</span>
+			<span class="dot-big" data-c-dot="2">&middot;</span>
+			<span class="dot-big" data-c-dot="3">&middot;</span>
+		</div>
+	</div>
+	<script src="./carousel.js"></script>
+</body>
+</html>	
